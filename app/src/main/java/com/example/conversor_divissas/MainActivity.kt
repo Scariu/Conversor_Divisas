@@ -34,7 +34,10 @@ class MainActivity : AppCompatActivity() {
             Log.d("Captura divisa", "$monto $divisaActual $divisaResultado")
             val resultado = conversorDivisa(monto, divisaActual, divisaResultado)
             binding.textViewResultado.text = resultado.toString()
-            binding.textViewNumeroResultado.text = " $monto $divisaActual equivale a $resultado $divisaResultado"
+            binding.textViewNumeroResultado.text = " $monto $divisaActual equivale a $resultado $divisaResultado."
+        }
+        binding.buttonReset.setOnClickListener(){
+            reset()
         }
     }
     fun conversorDivisa(monto: Double, divisaActual: String, divisaCambio: String): Double {
@@ -68,5 +71,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return resultadoConversion
+    }
+
+    fun reset(){
+        binding.editTextNumero.setText("")
+        binding.textViewResultado.text = ""
+        binding.textViewNumeroResultado.text = ""
     }
 }
