@@ -3,6 +3,7 @@
     <style name="Base.Theme.Conversor_Divissas" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">#49593E</item>
     </style>
 
     <style name="Theme.Conversor_Divissas" parent="Base.Theme.Conversor_Divissas" />
